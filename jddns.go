@@ -5,6 +5,8 @@ import (
 	"fmt"
 	"github.com/astaxie/beego/logs"
 	"github.com/kardianos/service"
+	"github.com/robfig/cron/v3"
+	"gopkg.in/yaml.v3"
 	"jddns/api"
 	"jddns/lib/install"
 	"os"
