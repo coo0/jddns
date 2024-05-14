@@ -1,0 +1,6 @@
+## 爱快管理页面的 URL，结尾不要加 "/"，
+ip-url: https://whois.pconline.com.cn/ipJson.jsp?ip=&json=true
+update-api: [*,*]
+hostname: [[*],[*]]
+Token: [*,*]
+cron: "*/5 * * * *" # 执行更新的周期 crontab
