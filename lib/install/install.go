@@ -17,7 +17,11 @@ func copyStaticFile(srcPath, bin string) string {
 		if _, err := copyFile(filepath.Join(srcPath, bin), "/usr/bin/"+bin); err != nil {
 			if _, err := copyFile(filepath.Join(srcPath, bin), "/usr/local/bin/"+bin); err != nil {
 				log.Fatalln(err)
+			} else {
+				binPath = "/usr/local/bin/" + bin
 			}
+		} else {
+			binPath = "/usr/bin/" + bin
 		}
 	} else {
 		copyFile(filepath.Join(srcPath, bin+".exe"), filepath.Join(common.GetAppPath(), bin+".exe"))
